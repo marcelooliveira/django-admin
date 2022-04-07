@@ -16,9 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-admin.site.site_header = "🍴 Kitchen Shop Administration 🥣"
-admin.site.site_title = "Kitchen Shop Admin"
-
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]

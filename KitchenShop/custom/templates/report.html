@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Inventory Report{% endblock %}
+
+{% block content %}
+  <div class="row mt-4">
+      <div class="col col-md-8 offset-md-2 alert alert-primary text-black text-center">
+          <span class="h3">📦 INVENTORY REPORT 📦</span>
+      </div>
+  </div>
+
+  {% for category in Categories %}
+  <div class="row">
+    <div class="col col-md-8 offset-md-2">
+      <div class="row flex-row align-items-center border-bottom">
+        <span class="col col-10"><em>{{ category.description }}</em></span>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}
