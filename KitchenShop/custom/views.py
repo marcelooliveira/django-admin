@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+from django.template import loader
+from custom.models import Category
+
+def index(request):
+  categories = Category.objects.order_by('product')
+  template = loader.get_template('report.html')
+  context = {
+      'Categories': categories
+  }
+  return HttpResponse(template.render(context, request))

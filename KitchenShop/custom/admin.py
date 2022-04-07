@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from custom.models import Category
+@admin.register(Category)
+class ProductAdmin(admin.ModelAdmin):
+    pass
